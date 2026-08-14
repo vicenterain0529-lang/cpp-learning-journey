@@ -4,7 +4,7 @@ This project is a simple documentation page for my transition into C++ for colle
 
 ## About Me
 
-My name is Ron Joseph C. Pantua. I am switching into C++ for my college class while also working on side projects to keep improving my programming skills. This repository reflects my early learning process and is meant to document what I am building and practicing as I grow.
+My name is Rain E. Vicente. I am switching into C++ for my college class while also working on side projects to keep improving my programming skills. This repository reflects my early learning process and is meant to document what I am building and practicing as I grow.
 
 ## Project Focus
 
