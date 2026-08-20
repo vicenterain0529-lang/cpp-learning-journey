@@ -1,0 +1,15 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Build and temporary folders
+build/
+out/
+output/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

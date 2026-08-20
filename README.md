@@ -1,6 +1,6 @@
 # C++ Learning Journey
 
-This project is a simple documentation page for my transition into C++ for college class and my side projects. I am using this repository to track my learning and showcase a beginner C++ program that I built while getting comfortable with logic, conditionals, functions, and user input.
+This repository documents my first steps into C++ and game development. The projects are intentionally small: they show my progress as I learn programming fundamentals, console interaction, and game logic.
 
 ## About Me
 
@@ -8,15 +8,21 @@ My name is Rain E. Vicente. I am switching into C++ for my college class while a
 
 ## Project Focus
 
-This repository focuses on one C++ project:
+The current game project is:
 
-- `rock.cpp` — a Rock, Paper, Scissors game with score tracking and console interaction
+- `gameorig.cpp` — a console movement simulator with a player, enemy, score tracking, random enemy respawning, and a drawn map
+
+Other beginner exercises in this repository include:
+
+- `rock.cpp` — a Rock, Paper, Scissors game
+- `arrays.cpp`, `hance.cpp`, `rain.cpp`, `randomEvent.cpp`, `sinendniron.cpp` — practice programs exploring C++ fundamentals
+- `word analyzer.cpp`, `wordcounter.cpp` — text and word-counting exercises
 
 ## Standard GitHub Procedure
 
 ```bash
 git init
-git add README.md rock.cpp
+git add README.md *.cpp
 git commit -m "Add C++ learning project"
 gh repo create cpp-learning-journey --public --source=. --remote=origin --push
 git push -u origin main
@@ -25,10 +31,12 @@ git push -u origin main
 ## How to Run
 
 ```bash
-g++ rock.cpp -o rock
-./rock
+g++ gameorig.cpp -o gameorig
+./gameorig
 ```
+
+The game uses `conio.h` for keyboard input, so it is currently intended for a Windows compiler such as MinGW g++.
 
 ## Notes
 
-This project serves as a lightweight documentation record of my early C++ learning journey for school and personal development.
+This project serves as a lightweight record of my early C++ learning journey for school, personal development, and future game projects.
