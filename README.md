@@ -12,11 +12,7 @@ The current game project is:
 
 - `gameorig.cpp` — a console movement simulator with a player, enemy, score tracking, random enemy respawning, and a drawn map
 
-Other beginner exercises in this repository include:
-
-- `rock.cpp` — a Rock, Paper, Scissors game
-- `arrays.cpp`, `hance.cpp`, `rain.cpp`, `randomEvent.cpp`, `sinendniron.cpp` — practice programs exploring C++ fundamentals
-- `word analyzer.cpp`, `wordcounter.cpp` — text and word-counting exercises
+The repository also includes `rock.cpp`, an earlier Rock, Paper, Scissors exercise.
 
 ## Standard GitHub Procedure
 
