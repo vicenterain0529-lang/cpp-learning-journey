@@ -48,7 +48,7 @@ cd output
 The executable expects `map.txt` one directory above it. To rebuild with MinGW g++:
 
 ```powershell
-g++ -Wall -Wextra -g3 ..\game2.0.cpp -o game.exe
+g++ -std=c++17 -Wall -Wextra -g3 ..\game2.0.cpp -o game.exe
 ```
 
 The game uses `conio.h` for keyboard input, so it currently targets Windows and MinGW g++.

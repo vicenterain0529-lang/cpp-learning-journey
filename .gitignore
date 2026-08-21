@@ -9,6 +9,10 @@ build/
 out/
 output/
 .vscode/
+!.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
 
 # Published build for the current movement simulator
 !output/

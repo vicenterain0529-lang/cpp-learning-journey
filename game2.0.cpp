@@ -4,11 +4,12 @@
 #include <cstdlib>
 #include <fstream>
 #include <cstring>
+#include <filesystem>
 // =====================================================
 // FUNCTION DECLARATIONS
 // =====================================================
 
-bool loadMap();
+bool loadMap(const char* executablePath);
 
 void chaserMovement(
     int& chaserRow,
@@ -83,12 +84,12 @@ char map[MAP_HEIGHT][MAP_WIDTH + 1];
 
 // main gameplay loop
 
-int main() {
+int main(int, char* argv[]) {
 
     srand(time(NULL));
 
     // Load map from text file
-    if (!loadMap()) {
+    if (!loadMap(argv[0])) {
         return 1;
     }
 
@@ -228,9 +229,29 @@ int main() {
 
 // map loading
 
-bool loadMap() {
+bool loadMap(const char* executablePath) {
 
-    std::ifstream file("../map.txt");
+    namespace filesystem = std::filesystem;
+    const filesystem::path executableDirectory =
+        filesystem::absolute(executablePath).parent_path();
+    const filesystem::path mapPath = "map.txt";
+    const filesystem::path executableMapPath =
+        executableDirectory / mapPath;
+    const filesystem::path parentMapPath =
+        executableDirectory.parent_path() / mapPath;
+
+    std::ifstream file;
+    for (const filesystem::path& candidate : {
+        mapPath,
+        executableMapPath,
+        parentMapPath
+    }) {
+        file.open(candidate);
+        if (file) {
+            break;
+        }
+        file.clear();
+    }
 
 
     if (!file) {
