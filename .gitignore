@@ -1,0 +1,24 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Build and temporary folders
+build/
+out/
+output/
+.vscode/
+!.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Published build for the current movement simulator
+!output/
+output/*
+!output/game.exe
+
+# OS files
+.DS_Store
+Thumbs.db
