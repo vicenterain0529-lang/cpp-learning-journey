@@ -1,104 +1,106 @@
-# C++ Learning Journey
+# Maze Chase: A C++ Terminal Game
 
-My growing C++ portfolio, from first console exercises to larger games and software projects.
+A beginner-friendly Windows terminal game built in C++. Move through a hand-designed maze, collect enemies to increase your score, and avoid hazards while a chaser tracks your position.
 
-I am Rain E. Vicente, a student building practical projects while moving deeper into C++. This repository keeps the work in one place so the progress is visible: early experiments stay part of the story, while newer projects can become more ambitious and polished over time.
+This project is part of my [C++ Learning Journey](https://github.com/vicenterain0529-lang/cpp-learning-journey), a growing portfolio that records my progress from first programming exercises to more advanced software projects.
 
-## Project Portfolio
+## Gameplay
 
-| Project | Stage | What It Shows | Links |
-| --- | --- | --- | --- |
-| Movement Simulator | Beginner, current | Console input, collision rules, map file loading, score, enemy AI | [Source](game2.0.cpp) · [Map](map.txt) · [v2.0 release](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases/tag/v2.0) |
-| Rock, Paper, Scissors | Beginner exercise | Functions, loops, validation, random choices, and score tracking | [Source](rock.cpp) |
+You control the player character `@` inside a 30 by 10 maze loaded from `map.txt`.
 
-The portfolio will grow as new projects are completed. A project can start small; the important part is recording what was learned, what changed, and what should improve next.
+### Rules
 
-## Current Project: Movement Simulator
+- Move with `W`, `A`, `S`, and `D`.
+- Walls marked `#` block movement.
+- Touch `E` to collect the enemy and increase your score.
+- The `C` chaser moves toward you every three turns.
+- Touching the chaser resets your position and score.
+- Touching an `x` hazard also resets your position and score.
+- Enemy and chaser positions are regenerated to avoid unsafe starting locations.
+- Press `N` at the start screen to exit.
 
-The current game is a Windows console movement simulator. It loads a 30 by 10 level from `map.txt` and includes:
+### Symbols
 
-- Player movement with wall collision checks
-- A score system and random enemy respawning
-- A second chaser with cooldown-based movement
-- Enemy and chaser respawning rules
-- Map row and width validation before gameplay
-- Screen redraws and a visible score
+| Symbol | Meaning |
+| --- | --- |
+| `@` | Player |
+| `E` | Collectible enemy |
+| `C` | Chaser |
+| `#` | Wall |
+| `x` | Reset hazard |
+| Space | Walkable floor |
 
-### Version 2.0 Improvements
+## Features
 
-- Moved the level layout into an editable map file
-- Added map validation and safer spawn handling
-- Added a second chaser and cooldown-based pressure
-- Added respawning for both moving threats
-- Fixed the build task and map loading from different launch directories
+- Real-time single-key terminal movement
+- Wall collision detection
+- Score tracking and enemy respawning
+- Chaser movement with a cooldown
+- Map loading from an external text file
+- Map size and row validation before gameplay
+- Launch-directory-independent map discovery
+- Screen redraws and a visible score counter
 
-Download the Windows build from the [v2.0 release](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases/tag/v2.0). The [v1.0 release](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases/tag/v1.0) preserves the original game for comparison.
+## Download And Run
 
-## Learning Progression
+The easiest option is to download `game.exe` from the [v2.0 release](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases/tag/v2.0).
 
-### Beginner
-
-- C++ syntax, variables, functions, loops, and conditionals
-- Console input and output
-- Random values and basic game rules
-- Arrays, strings, and simple file input
-
-### Building Next
-
-- Classes and data ownership
-- Standard library containers and algorithms
-- Better randomization with `<random>`
-- Automated tests for game rules
-- Portable builds with CMake
-
-### Long-Term Goals
-
-- Modular game architecture
-- More advanced enemy behavior
-- Save data and configuration systems
-- Cross-platform builds
-- Larger projects with documented design decisions
-
-## How To Run
-
-The published executable targets Windows and MinGW g++.
+Keep `map.txt` in the repository root, then run the executable from the `output` directory:
 
 ```powershell
 cd output
 .\game.exe
 ```
 
-The game can also be launched from the repository root because the loader searches the working directory, the executable directory, and its parent directory for `map.txt`.
+The original version is available in the [v1.0 release](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases/tag/v1.0).
 
-To build the current project from the repository root:
+## Build From Source
+
+### Requirements
+
+- Windows
+- MinGW-w64 with `g++`
+- C++17 support
+
+From the repository root, compile the game with:
 
 ```powershell
 g++ -std=c++17 -Wall -Wextra -g3 game2.0.cpp -o output\game.exe
 ```
 
-In VS Code, use `Ctrl+Shift+B` to run the tracked `Build movement simulator` task.
+Then run it:
 
-## Repository Structure
-
-```text
-game2.0.cpp          Current movement simulator
-map.txt              Current level data
-rock.cpp             Earlier console exercise
-.vscode/             Reproducible build and debug configuration
-output/game.exe      Current Windows build
+```powershell
+cd output
+.\game.exe
 ```
 
-As the portfolio grows, larger projects will be grouped into their own folders. Each project should include its source, a short README, build instructions, and a release when a runnable build is useful.
+The game uses the Windows-specific `conio.h` library for single-key input. In VS Code, `Ctrl+Shift+B` runs the tracked `Build movement simulator` task.
 
-## Honest Next Steps
+## Project Files
 
-- Add an in-game quit key and stronger invalid-input handling
-- Replace `rand()` with `<random>`
-- Separate input, rendering, and game state into modules
-- Add tests for map loading, collisions, spawning, and scoring
-- Add a portable CMake build
-- Add screenshots or short gameplay recordings to future project pages
+```text
+game2.0.cpp          Game source code
+map.txt              Editable maze layout
+output/game.exe      Published Windows build
+.vscode/             Build and debug configuration
+rock.cpp             Earlier Rock, Paper, Scissors exercise
+```
 
-## Releases
+## Future Improvements
 
-Use the [Releases page](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases) to compare runnable milestones. Source history remains available through Git commits and tags.
+- Add a quit key during gameplay.
+- Improve invalid-input handling.
+- Replace `rand()` with the modern `<random>` library.
+- Separate input, rendering, and game state into modules or classes.
+- Add automated tests for map loading, collisions, spawning, and scoring.
+- Add a portable CMake build and non-Windows support.
+- Add more levels, difficulty settings, and a high-score system.
+- Add screenshots or gameplay recordings to the release page.
+
+## Version History
+
+- **v2.0:** External map loading, map validation, a second chaser, respawning, and improved build configuration.
+- **v1.0:** Original movement simulator release.
+
+See the [full Releases page](https://github.com/vicenterain0529-lang/cpp-learning-journey/releases) to download milestone builds and compare versions.
