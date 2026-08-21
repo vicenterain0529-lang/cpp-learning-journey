@@ -10,6 +10,11 @@ out/
 output/
 .vscode/
 
+# Published build for the current movement simulator
+!output/
+output/*
+!output/game.exe
+
 # OS files
 .DS_Store
 Thumbs.db
