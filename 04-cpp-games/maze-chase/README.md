@@ -77,6 +77,25 @@ cd output
 
 The game uses the Windows-specific `conio.h` library for single-key input. In VS Code, `Ctrl+Shift+B` runs the tracked `Build movement simulator` task.
 
+## How It Works
+
+```text
+Load and validate map -> spawn entities -> render map and score
+        -> read movement key -> move chaser and resolve collisions -> repeat
+```
+
+Important functions include `loadMap`, `playerMovement`, `mapGenerator`,
+`enemyRespawn`, `chaserMovement`, and `playerReset`.
+
+## Concepts Demonstrated
+
+- Arrays and constants for map storage
+- File input and row-length validation
+- `std::filesystem` path lookup
+- Game loops and state updates
+- Collision detection and respawning
+- Platform-specific keyboard input through `conio.h`
+
 ## Project Files
 
 ```text
@@ -85,17 +104,6 @@ map.txt              Editable maze layout
 output/game.exe      Published Windows build
 .vscode/             Build and debug configuration
 rock.cpp             Earlier Rock, Paper, Scissors exercise
-```
-
-## Rock, Paper, Scissors
-
-[`rock.cpp`](rock.cpp) is a terminal-based Rock, Paper, Scissors game. The player chooses rock, paper, or scissors while the computer makes a random move. The game displays ASCII art for both choices, reports the result, and keeps score across rounds.
-
-Build and run it from the repository root with:
-
-```powershell
-g++ -std=c++17 -Wall -Wextra -g3 rock.cpp -o output\rock.exe
-.\output\rock.exe
 ```
 
 ## Future Improvements

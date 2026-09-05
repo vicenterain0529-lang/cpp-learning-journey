@@ -10,6 +10,17 @@ My name is Rain E. Vicente. I am learning programming for college and personal
 projects. I keep older code because it records what I practiced, what challenged
 me, and how my designs changed.
 
+## Featured Projects
+
+| Project | Technology | Status | What it demonstrates |
+| --- | --- | --- | --- |
+| [Student Enrollment Portal](03-cpp-projects/student-enrollment/README.md) | C++ | In Progress | OOP, composition, vectors, prerequisites, GPA and seat validation |
+| [Scholarship Application](03-cpp-projects/scholarship/README.md) | C++ | Completed | Multi-file classes, encapsulation, evaluation rules, and summary reporting |
+| [Maze Chase](04-cpp-games/maze-chase/README.md) | C++ / Windows terminal | Completed and published | Map files, game loops, movement, collision, spawning, and score state |
+| [Rock, Paper, Scissors](04-cpp-games/rock-paper-scissors/README.md) | C++ | Completed exercise | Functions, random choices, validation, and references |
+| [SDL3 Prototype](05-sdl3/first-sdl3/README.md) | C++ / SDL3 | Prototype | SDL initialization, window creation, events, keyboard input, and movement |
+| [Student Management](06-python/student-management/README.md) | Python | In Progress | Modules, classes, menus, and JSON persistence |
+
 ## Languages and Technologies Found
 
 - **C++:** console exercises, OOP applications, terminal games, and SDL3 prototypes

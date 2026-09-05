@@ -1,6 +1,7 @@
 # Student Management System
 
-This project is a simple console-based student management system that I built while learning Python. I used it to practice object-oriented programming, user input handling, and saving data to a JSON file.
+This project is a modular Python console application for creating, searching,
+updating, grading, removing, saving, and loading student records.
 
 ## Features
 
@@ -17,6 +18,23 @@ This project is a simple console-based student management system that I built wh
 - Python
 - Object-oriented programming
 - JSON file storage
+
+## How It Works
+
+```text
+main.py -> menu_handler -> StudentManager
+                         ├── Student objects
+                         └── student_master_list.json
+```
+
+`StudentManager` keeps a list of `Student` objects, routes menu operations,
+searches by ID, updates fields and grades, and serializes records with
+`json.dump`.
+
+## Current Status
+
+**In Progress.** Stronger input validation, data-file handling, and testing
+remain future work.
 
 ## How to run
 
