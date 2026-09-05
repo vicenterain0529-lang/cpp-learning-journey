@@ -1,0 +1,18 @@
+[
+    {
+        "task": "learn python file handling",
+        "completed": false
+    },
+    {
+        "task": "seperate the pokemon file into modular py package",
+        "completed": false
+    },
+    {
+        "task": "create new creatures",
+        "completed": false
+    },
+    {
+        "task": "create proper battle system",
+        "completed": false
+    }
+]

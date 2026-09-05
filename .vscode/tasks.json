@@ -10,7 +10,7 @@
         "-Wall",
         "-Wextra",
         "-g3",
-        "${workspaceFolder}/game2.0.cpp",
+        "${workspaceFolder}/04-cpp-games/maze-chase/game2.0.cpp",
         "-o",
         "${workspaceFolder}/output/game.exe"
       ],

@@ -19,6 +19,15 @@ output/
 output/*
 !output/game.exe
 
+# Generated files inside imported projects
+**/__pycache__/
+**/.venv/
+**/.pio/
+**/build/
+**/bin/
+**/obj/
+**/student_master_list.json
+
 # OS files
 .DS_Store
 Thumbs.db

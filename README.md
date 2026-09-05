@@ -1,105 +1,159 @@
 # C++ Learning Journey
 
-This repository is Rain E. Vicente's programming portfolio. It records the progression from small console exercises to a larger C++ terminal game, including the concepts practiced, implementation challenges, and next steps.
+My programming portfolio as I learn C++, Python, SDL3, and embedded programming.
+The repository preserves exercises, experiments, prototypes, and larger applications
+so the code shows how my skills developed over time.
 
 ## About Me
 
-My name is Rain E. Vicente. I am learning C++ for college and personal projects. I use this repository to keep my older work, understand how my code evolves, and document what I learn while building.
+My name is Rain E. Vicente. I am learning programming for college and personal
+projects. I keep older code because it records what I practiced, what challenged
+me, and how my designs changed.
 
-## Learning Progression
+## Languages and Technologies Found
 
-### 1. First console project: Rock, Paper, Scissors
+- **C++:** console exercises, OOP applications, terminal games, and SDL3 prototypes
+- **Python:** fundamentals, console applications, OOP projects, JSON persistence, and Tkinter
+- **Arduino / C++:** PlatformIO LED experiments
+- **SDL3:** window creation, events, keyboard input, and early rendering experiments
 
-[`rock.cpp`](rock.cpp) is an early console game with:
+## Evidence-Based C++ Progress
 
-- Keyboard input and validation
-- `if` statements and `switch` statements
-- Loops for repeated rounds
-- Functions and function prototypes
-- Reference parameters for updating scores
-- Random number generation
-- Score tracking and game-state decisions
+### Fundamentals
 
-This project established the basics of decomposing a program into functions and controlling a complete interactive loop.
+- [x] Variables and data types
+- [x] Operators and arithmetic
+- [x] Input and output
+- [x] Conditional and switch statements
+- [x] Loops
+- [x] Input validation
+- [x] Functions, parameters, and return values
+- [x] Scope
+- [x] References
+- [x] Pointers (SDL window pointers and pointer-based APIs)
 
-### 2. Current project: Maze Chase
+### Data Structures and Files
 
-[`game2.0.cpp`](game2.0.cpp) is a Windows terminal game that expands those ideas into a larger program:
+- [x] C-style arrays and character arrays
+- [x] `std::string`
+- [x] `std::vector`
+- [x] `struct`
+- [x] Text-file input and validation
+- [ ] `std::map`
+- [ ] `std::set`
+- [ ] JSON persistence in C++
 
-- A 30 by 10 map loaded from [`map.txt`](map.txt)
-- Player movement with `W`, `A`, `S`, and `D`
-- Walls, hazards, collectible enemies, and a pursuing chaser
-- Collision detection, score updates, and respawning
-- A chaser cooldown and movement logic
-- Map validation and file-error handling
-- `std::filesystem` for finding the map relative to the executable
-- A VS Code build and debug workflow in [`.vscode/`](.vscode/)
+### Object-Oriented Programming
 
-The game demonstrates the transition from isolated functions to a multi-step game loop with shared state, file input, and platform-specific terminal input.
+- [x] Classes and objects
+- [x] Access modifiers and encapsulation
+- [x] Constructors
+- [x] Getters and setters
+- [x] Composition
+- [x] Inheritance
+- [ ] Polymorphism and virtual functions
+- [x] Header/source separation
+- [x] Multi-file projects
 
-## Run the Maze Chase Game
+### Modern C++ and Architecture
 
-### Requirements
+- [x] `const`
+- [x] `std::filesystem`
+- [x] Error handling and validation
+- [ ] Smart pointers and RAII
+- [ ] Move semantics
+- [ ] Templates and STL algorithms
+- [ ] Automated tests
 
-- Windows
-- MinGW-w64 with `g++`
-- C++17 support
+## Project Inventory
 
-Build from the repository root:
+| Project | Language / technology | Status | Evidence and concepts |
+| --- | --- | --- | --- |
+| Early practice files | C++ | Exercise | Input/output, loops, strings, character handling, random numbers |
+| Rock, Paper, Scissors | C++ | Completed exercise | Functions, validation, switch statements, references, score state |
+| Maze Chase | C++ / Windows terminal | Completed and published | File loading, map validation, movement, collision, respawning, game loop |
+| Scholarship application | C++ | Completed project | Class design, encapsulation, constructors, vectors, multi-file structure |
+| Student enrollment portal | C++ | In progress | `Student`, `Course`, and `RegistrationSystem` classes, prerequisites, GPA and seat checks |
+| OOP and terminal exercises | C++ | Exercises | Arrays, structs, classes, inheritance, constructors, Tic-Tac-Toe |
+| SDL3 prototypes | C++ / SDL3 | Prototype | SDL initialization, windows, events, keyboard input, position state |
+| Creature Battle variants | Python | In progress / experiments | Modules, classes, inheritance, turn-based battle logic |
+| Library Management | Python | In progress | Modules, classes, books, borrowers, and library organization |
+| Student Management | Python | In progress | Classes, menus, JSON save/load, student records |
+| To-do list applications | Python / Tkinter | Prototype | GUI widgets, JSON persistence, task operations |
+| Python small projects | Python | Exercises | Calculators, conversions, guessing games, shopping cart, RPG |
+| Python 2 exercises | Python | Exercises | Banking, encryption, dice, and small console programs |
+| YouTube downloader experiment | Python | Experiment | A small downloader script; dependencies and completion need review |
+| LED experiments | Arduino / C++ / PlatformIO | Experiment | Arduino setup/loop and digital output |
 
-```powershell
-g++ -std=c++17 -Wall -Wextra -g3 game2.0.cpp -o output\game.exe
-```
-
-Run the game:
-
-```powershell
-cd output
-.\game.exe
-```
-
-Keep `map.txt` in the repository root. The program also searches locations relative to the executable when it is launched from `output`.
-
-## Maze Controls
-
-| Input | Action |
-| --- | --- |
-| `W` | Move up |
-| `A` | Move left |
-| `S` | Move down |
-| `D` | Move right |
-| `N` | Exit from the start screen |
-
-| Symbol | Meaning |
-| --- | --- |
-| `@` | Player |
-| `E` | Collectible enemy |
-| `C` | Chaser |
-| `#` | Wall |
-| `x` | Reset hazard |
-| Space | Walkable floor |
-
-## Repository Map
+## Repository Structure
 
 ```text
-rock.cpp              Early Rock, Paper, Scissors project
-game2.0.cpp           Current Maze Chase source code
-map.txt               Editable maze layout
-output/game.exe       Published Windows build
-.vscode/tasks.json    VS Code build task
-.vscode/launch.json   VS Code debugger configuration
+01-cpp-fundamentals/       Early C++ practice files
+02-cpp-exercises/          OOP, algorithms, and terminal exercises
+03-cpp-projects/           Scholarship and student enrollment applications
+04-cpp-games/              Rock, Paper, Scissors and Maze Chase
+05-sdl3/                   SDL3 prototypes
+06-python/                 Python exercises and multi-file projects
+07-arduino-platformio/     PlatformIO LED experiments
+notes/                     Inventory and progress evidence
 ```
 
-## What I Am Learning Next
+## Current Focus
 
-- Replace `rand()` with the modern `<random>` library.
-- Separate input, rendering, and game state into classes or modules.
-- Improve invalid-input and quit handling during gameplay.
-- Add automated tests for map loading, collisions, spawning, and scoring.
-- Learn a portable CMake build and non-Windows input approach.
-- Add levels, difficulty settings, and a high-score system.
+The most recently modified files are the SDL3 practice programs from September
+4, 2026. That makes SDL3 keyboard input, event handling, window management,
+and the next rendering step the clearest current focus. Student Enrollment was
+the next most recently modified multi-file application, so its validation and
+registration rules are also active practice areas.
 
-## Version History
+## Run Selected Projects
 
-- **v2.0:** External map loading, validation, respawning, a chaser cooldown, and improved build configuration.
-- **v1.0:** Original movement simulator.
+### Maze Chase
+
+On Windows with MinGW-w64 and C++17:
+
+```powershell
+g++ -std=c++17 -Wall -Wextra -g3 04-cpp-games\maze-chase\game2.0.cpp -o output\game.exe
+.\output\game.exe
+```
+
+The game uses `map.txt` from the repository root and supports `W`, `A`, `S`,
+and `D` movement.
+
+### Python projects
+
+Run a project from its own directory, for example:
+
+```powershell
+python 06-python\student-management\main.py
+```
+
+Project-specific READMEs are preserved where they exist.
+
+## Learning Assessment
+
+### Demonstrated
+
+Console control flow, functions, validation, references, arrays, strings,
+vectors, classes, inheritance, multi-file C++, text-file input, Python
+modules/classes, JSON persistence in Python, SDL event handling, and Arduino
+digital output.
+
+### Practiced
+
+Larger application organization, reusable models, game loops, collision
+handling, persistence workflows, and separating UI from program logic.
+
+### Explored
+
+SDL3 rendering, Tkinter GUI design, PlatformIO workflows, and multiple
+versions of the Python creature battle project.
+
+### Not Yet Demonstrated in the collected files
+
+C++ JSON persistence, `std::map`, `std::set`, smart pointers, move semantics,
+templates, automated tests, completed SDL3 rendering, and a complete embedded
+application.
+
+See [`notes/inventory.md`](notes/inventory.md) and
+[`notes/progress-log.md`](notes/progress-log.md) for the detailed evidence.
